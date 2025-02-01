@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const jobContainer = document.getElementById("jobContainer");
+    const moreJobsContainer = document.getElementById("moreJobs");
 
     function displayJobs(container, jobList) {
         container.innerHTML = ""; // Clear previous jobs
@@ -20,7 +21,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Ensure `jobs` is loaded from `data.js`
     if (typeof jobs !== "undefined") {
-        displayJobs(jobContainer, jobs);
+        const firstThreeJobs = jobs.slice(0, 3); // First 3 jobs
+        const remainingJobs = jobs.slice(3); // Rest of the jobs
+
+        // Display first 3 jobs in `jobContainer`
+        displayJobs(jobContainer, firstThreeJobs);
+
+        // Display the remaining jobs in `moreJobsContainer`
+        displayJobs(moreJobsContainer, remainingJobs);
     } else {
         console.error("Job data not loaded!");
     }
