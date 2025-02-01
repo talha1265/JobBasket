@@ -1,10 +1,5 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
     const jobContainer = document.getElementById("jobContainer");
-
-    // Load jobs from localStorage
-    function getStoredJobs() {
-        return JSON.parse(localStorage.getItem("jobs")) || [];
-    }
 
     function displayJobs(container, jobList) {
         container.innerHTML = ""; // Clear previous jobs
@@ -23,6 +18,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Load jobs when page loads
-    displayJobs(jobContainer, getStoredJobs());
+    // Ensure `jobs` is loaded from `data.js`
+    if (typeof jobs !== "undefined") {
+        displayJobs(jobContainer, jobs);
+    } else {
+        console.error("Job data not loaded!");
+    }
 });
