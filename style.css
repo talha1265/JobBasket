@@ -194,7 +194,7 @@
         text-align: center;
         font-weight: bold;
         margin: 20px auto;
-        width: 80%;
+        
         border-radius: 10px;
     }
     .greeting-box {
@@ -231,7 +231,7 @@
         width: 100%;
     }
     @media (max-width: 768px) {
-        .job-card, .ad-banner, .greeting-box {
+        .job-card,  .greeting-box {
             width: 90%;
         }
         .navbar {
