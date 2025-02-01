@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Add Jobs</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <header>
+        <h1>Admin Panel - Add Job</h1>
+    </header>
+    <main>
+        <form id="jobForm">
+            <label for="title">Job Title:</label>
+            <input type="text" id="title" required>
+
+            <label for="company">Company:</label>
+            <input type="text" id="company" required>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" required>
+
+            <label for="date">Posted Date:</label>
+            <input type="date" id="date" required>
+
+            <label for="url">Job URL:</label>
+            <input type="url" id="url" required>
+
+            <button type="submit">Add Job</button>
+        </form>
+    </main>
+    <script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,300 @@
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa;
+    }
+    /* Header */
+    header {
+        background: linear-gradient(to right, #6c757d, #495057);
+        color: #fff;
+        padding: 10px 20px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .logo {
+        display: flex;
+        align-items: center;
+    }/* General Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Poppins', Arial, sans-serif;
+        line-height: 1.6;
+        background: #f7f7f7;
+        color: #333;
+    }
+
+    /* Header */
+    header {
+        background: linear-gradient(to right, #007bff, #0067d6);
+        color: #fff;
+        padding: 10px 20px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 160px;
+        border-radius: 10px;
+    }
+
+    /* Navbar */
+    .navbar {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        list-style: none; /* Remove list dots */
+    }
+
+    .navbar a {
+        text-decoration: none;
+        color: white;
+        font-weight: 600;
+        font-size: 1rem;
+        padding: 5px 15px;
+        border-radius: 5px;
+        transition: background 0.3s, transform 0.3s;
+    }
+
+    .navbar a:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-2px);
+    }
+
+    /* Hide hamburger button on desktop */
+    .nav-toggle {
+        display: none; /* Default hidden on large screens */
+    }
+
+    @media (max-width: 768px) {
+        .nav-toggle {
+            display: block;
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .navbar {
+            flex-direction: column;
+            gap: 10px;
+            display: none; /* Hide navbar links on mobile */
+        }
+
+        .navbar.active {
+            display: flex; /* Show navbar when active */
+        }
+    }
+
+   /* Job Listing Section */
+.job-listing {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    margin: 20px;
+    padding: 10px;
+    justify-content: center;
+}
+
+.job-card {
+    background: white;
+    padding: 25px;
+    font-size: 18px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    border-left: 5px solid #007bff;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.job-card h3 a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s;
+}
+
+.job-card h3 a:hover {
+    color: #0056b3;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.35);
+}
+
+/* Apply Button */
+.apply-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+    align-self: flex-end; /* Ensures alignment on larger screens */
+}
+
+.apply-btn:hover {
+    background: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .job-listing {
+        grid-template-columns: 1fr; /* Single column on small screens */
+        padding: 10px;
+    }
+
+    .job-card {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .apply-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+    .ad-banner {
+        background-color: #ffc107;
+        color: black;
+        padding: 20px;
+        text-align: center;
+        font-weight: bold;
+        margin: 20px auto;
+        width: 80%;
+        border-radius: 10px;
+    }
+    .greeting-box {
+        background: #28a745;
+        color: white;
+        text-align: center;
+        padding: 25px;
+        margin: 20px auto;
+        width: 80%;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .contact-btn {
+        background: white;
+        color: #28a745;
+        border: none;
+        padding: 12px 24px;
+        font-size: 18px;
+        border-radius: 6px;
+        cursor: pointer;
+        margin-top: 12px;
+        transition: background 0.3s;
+    }
+    .contact-btn:hover {
+        background: #f1f1f1;
+    }
+    .footer {
+        background-color: #343a40;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+    @media (max-width: 768px) {
+        .job-card, .ad-banner, .greeting-box {
+            width: 90%;
+        }
+        .navbar {
+            font-size: 20px;
+            padding: 12px;
+        }
+    }
+
+    /* .contact */
+    .contact-form {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        
+        
+    }
+    form{
+        width: 55%;
+        margin-top: 70px;
+        margin-bottom: 120px;
+    }
+    .contact-form h2 {
+        font-size: 28px;
+        color: #333;
+        margin-bottom: 20px;
+    }
+    
+    .input-container {
+        margin-bottom: 20px;
+    }
+    
+    .input-container label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 600;
+        color: #333;
+    }
+    
+    .input-container input, .input-container textarea {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        color: #333;
+    }
+    
+    textarea {
+        resize: vertical;
+    }
+    
+    .submit-btn {
+        background-color: #f39c12;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    
+    .submit-btn:hover {
+        background-color: #e67e22;
+    }

@@ -1,0 +1,148 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+header .logo img {
+    max-width: 100px;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav .active {
+    border-bottom: 2px solid #f39c12;
+}
+
+.contact-section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.contact-section h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.contact-form, .contact-info {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 48%;
+}
+
+.contact-form h2, .contact-info h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    margin-bottom: 20px;
+}
+
+.input-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #333;
+}
+
+.input-container input, .input-container textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #333;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #f39c12;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.submit-btn:hover {
+    background-color: #e67e22;
+}
+
+.contact-info p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #f39c12;
+}
+
+/* Google Map */
+#map {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form, .contact-info {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}

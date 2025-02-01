@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listings</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- For Font Awesome Icons -->
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+          <img src="./logo5.png" alt="Logo"> <!-- Replace with your actual logo -->
+        </div>
+        <div class="ham">
+          <button class="nav-toggle" onclick="toggleNavbar()">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+        <nav id="navbar-links" class="navbar">
+          <a href="./index.html">Home</a>
+        
+          <a href="contact.html">Contact</a>
+        </nav>
+      </header>
+      
+      <div class="contact-form">
+        
+        <form  method="POST">
+            <div class="input-container">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="input-container">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-container">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </div>
+    <footer class="footer">&copy; 2025 Job Portal. All Rights Reserved.</footer>
+    
+    <script src="contact.js"></script>
+
+</body>
+</html>
