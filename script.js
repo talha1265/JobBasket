@@ -19,12 +19,11 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Ensure `jobs` is loaded from `data.js`
     if (typeof jobs !== "undefined") {
         const firstThreeJobs = jobs.slice(0, 3); // First 3 jobs
         const remainingJobs = jobs.slice(3); // Rest of the jobs
 
-        // Display first 3 jobs in `jobContainer`
+        // Display first 3 jobs before the first ad banner
         displayJobs(jobContainer, firstThreeJobs);
 
         // Display the remaining jobs in `moreJobsContainer`
