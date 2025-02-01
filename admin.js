@@ -1,29 +1,36 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const jobForm = document.getElementById("jobForm");
+document.addEventListener("DOMContentLoaded", async () => {
+    const jobContainer = document.getElementById("jobContainer");
 
-    jobForm.addEventListener("submit", (event) => {
-        event.preventDefault();
+    // Load job data from external file
+    const loadJobs = async () => {
+        try {
+            const response = await fetch("data.js");
+            const text = await response.text();
+            const jobs = eval(text); // Evaluate the script content as JavaScript
 
-        const newJob = {
-            title: document.getElementById("title").value,
-            company: document.getElementById("company").value,
-            location: document.getElementById("location").value,
-            date: document.getElementById("date").value,
-            url: document.getElementById("url").value
-        };
+            displayJobs(jobContainer, jobs);
+        } catch (error) {
+            console.error("Error loading jobs:", error);
+        }
+    };
 
-        // Get existing jobs from localStorage or initialize empty array
-        let jobs = JSON.parse(localStorage.getItem("jobs")) || [];
+    function displayJobs(container, jobList) {
+        container.innerHTML = ""; // Clear previous jobs
+        jobList.forEach(job => {
+            const jobCard = document.createElement("div");
+            jobCard.classList.add("job-card");
+            jobCard.innerHTML = `
+                <div>
+                    <h3><a href="${job.url}" target="_blank">${job.title}</a></h3>
+                    <p>${job.company} - ${job.location}</p>
+                    <p><strong>Posted on:</strong> ${job.date}</p>
+                </div>
+                <button class="apply-btn" onclick="window.open('${job.url}', '_blank')">Apply Now</button>
+            `;
+            container.appendChild(jobCard);
+        });
+    }
 
-        // Add new job
-        jobs.push(newJob);
-
-        // Save updated jobs list to localStorage
-        localStorage.setItem("jobs", JSON.stringify(jobs));
-
-        alert("Job added successfully!");
-
-        // Reset form
-        jobForm.reset();
-    });
+    // Load jobs when page loads
+    await loadJobs();
 });
