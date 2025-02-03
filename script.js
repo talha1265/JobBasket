@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (typeof jobs !== "undefined") {
-        const firstThreeJobs = jobs.slice(0, 3); // First 3 jobs
-        const remainingJobs = jobs.slice(3); // Rest of the jobs
+        const firstThreeJobs = jobs.slice(0, 2); // First 3 jobs
+        const remainingJobs = jobs.slice(2); // Rest of the jobs
 
         // Display first 3 jobs before the first ad banner
         displayJobs(jobContainer, firstThreeJobs);
