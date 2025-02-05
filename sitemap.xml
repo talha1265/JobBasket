@@ -11,6 +11,16 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://jobbasket.netlify.app/about.html</loc>
+        <lastmod>2025-02-05</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://jobbasket.netlify.app/policy.html</loc>
+        <lastmod>2025-02-05</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
         <loc>https://jobbasket.netlify.app/contact.html</loc>
         <lastmod>2025-02-02</lastmod>
         <priority>0.7</priority>
